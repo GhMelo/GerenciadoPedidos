@@ -1,0 +1,16 @@
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Insira o Pedido</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="nome_produto" placeholder="Insira o nome">
+        <input type="text" class="form-control" [(ngModel)]="valor" placeholder="valor">
+        <input type="text" class="form-control" [(ngModel)]="data_vencimento" placeholder="data">
+    </div>
+</div>
+
+<button (click)="addPedido()" *ngIf="ped.Id==0" class="btn btn-primary">
+    add
+</button>
+<button (click)="updatePedido()" *ngIf="ped.Id!=0" class="btn btn-primary">
+    update
+</button>
+
